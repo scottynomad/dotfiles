@@ -1,0 +1,1 @@
+LD_LIBRARY_PATH=/idealist/releases/sandbox-v4.0.0/lib PATH=/idealist/releases/sandbox-v4.0.0/bin:$PATH ./configure --enable-pythoninterp --enable-cscope --enable-rubyinterp --with-python-config-dir=/idealist/releases/sandbox-v4.0.0/lib/python2.7/config --prefix=/home/scott
