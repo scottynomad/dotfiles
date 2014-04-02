@@ -46,3 +46,15 @@
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
 	url = http://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/scss-syntax"]
+	path = vim/bundle/scss-syntax
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "vim/bundle/genshi"]
+	path = vim/bundle/genshi
+	url = https://github.com/dag/genshi.vim.git
+[submodule "flake8"]
+	path = vim/bundle/flake8
+	url = https://github.com/andviro/flake8-vim
+[submodule "vim/bundle/vim-flake8"]
+	path = vim/bundle/vim-flake8
+	url = https://github.com/miyakogi/vim-flake8.git

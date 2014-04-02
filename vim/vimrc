@@ -68,7 +68,7 @@ nnoremap Y y$
 
 " colors
 syntax on
-set background=dark
+set background=light
 colorscheme solarized
 
 " The PC is fast enough, do syntax highlight syncing from start
@@ -111,8 +111,10 @@ vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-if v:version >= 703
-    set colorcolumn=85
+if exists('+colorcolumn')
+    set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
 "set list
@@ -236,6 +238,7 @@ autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=80
 \ formatoptions+=croq softtabstop=4 smartindent
 \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd BufWritePost *.py call Flake8()
 
 let python_highlight_all=1
 let python_highlight_exceptions=0
@@ -290,13 +293,8 @@ autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 
 " Javascript
 " ----------
-autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
+autocmd FileType javascript setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=79
 let javascript_enable_domhtmlcss=1
-
-
-" CoffeeScript
-" ------------
-autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
 
 
 " D
@@ -388,3 +386,5 @@ let g:ctrlp_user_command = {
 \ }
 
 autocmd QuickFixCmdPost *grep* cwindow
+
+set list listchars=tab:→\ ,trail:·
