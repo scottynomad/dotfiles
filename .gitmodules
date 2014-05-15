@@ -14,12 +14,6 @@
 [submodule "vim/bundle/vim-git"]
 	path = vim/bundle/vim-git
 	url = https://github.com/tpope/vim-git.git
-[submodule "vim/bundle/vim-fireplace"]
-	path = vim/bundle/vim-fireplace
-	url = https://github.com/tpope/vim-fireplace.git
-[submodule "vim/bundle/rainbow_parentheses"]
-	path = vim/bundle/rainbow_parentheses
-	url = https://github.com/kien/rainbow_parentheses.vim.git
 [submodule "vim/bundle/vim-clojure-static"]
 	path = vim/bundle/vim-clojure-static
 	url = https://github.com/guns/vim-clojure-static.git
@@ -53,8 +47,5 @@
 	path = vim/bundle/genshi
 	url = https://github.com/dag/genshi.vim.git
 [submodule "vim/bundle/vim-flake8"]
-	path = vim/bundle/vim-flake8
-	url = https://github.com/nvie/vim-flake8.git
-[submodule "nvie-flake8"]
 	path = vim/bundle/vim-flake8
 	url = https://github.com/nvie/vim-flake8.git
